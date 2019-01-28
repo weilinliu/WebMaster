@@ -1,0 +1,9 @@
+test:
+  override:
+    - "true"
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - scp -r * root@157.230.155.30:/var/www/html/
