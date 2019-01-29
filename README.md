@@ -32,6 +32,20 @@ http://157.230.155.30:8082/awstats.mysite
 ## Obscure server identity
 
 ## Compress textual content
+Comparison report of gzip
+
+Gzip compression works by searching for duplicate strings within a file and then replaces the second string with a pointer to the previous string. This helps greatly reduce the amount of actual text within a file as there is usually significant amount of whitespace and duplicate text.
+As for server-to-browser communication, gzip works in the following way.
+1. A browser which understands gzip makes a request for a file from the web server.
+2. The server receives the request and notices that the browser understands gzip therefore returns a gzipped version of the requested file.
+3. The browser receives the file, decompresses it, and is able to read the data.
+
+Compressing content helps us save bandwith, and makes web applications faster.
+The difference between apache and nginx server is compression is done from mod_deflate from apache, whereas in nginx server, compression is done in nginx.conf. However, what both apache and nginx server have is given the same input data and the same compression level setting, you will see virtually the same compression ratio with both implementations
+
+![image](https://github.com/weilinliu/WebMaster/raw/master/img/apache.png)
+![image](https://github.com/weilinliu/WebMaster/raw/master/img/nginx.png)
+
 
 ## Run PHP
 http://157.230.155.30:8081/phpinfo  
