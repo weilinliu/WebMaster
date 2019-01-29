@@ -7,12 +7,30 @@ NodeJS: http://157.230.155.30:8083
 
 ## Employ password protection
 Apache  
+username:guest  
+password:passwordforguest  
+
 username: wel288  
 password: 12345  
 
+username: sis070  
+password: 12345  
+  
+username: muh005  
+password: 12345 
+    
 Nginx  
 username:guest  
 password:passwordforguest  
+
+username: wel288  
+password: 12345  
+
+username: sis070  
+password: 12345  
+  
+username: muh005  
+password: 12345  
 
 ## Have a static team page
 https://validator.w3.org/check?uri=http%3A%2F%2F157.230.155.30%3A8081%2F
