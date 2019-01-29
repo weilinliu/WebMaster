@@ -6,11 +6,17 @@ NodeJS: http://157.230.155.30:8083
 
 
 ## Employ password protection
+Apache
+username: wel288
+password: 12345
+
+Nginx:
 username:guest  
 password:passwordforguest  
 
 ## Have a static team page
 https://validator.w3.org/check?uri=http%3A%2F%2F157.230.155.30%3A8081%2F
+
 https://validator.w3.org/check?uri=http%3A%2F%2F157.230.155.30%3A8082%2F
 
 ## Use custom error pages
@@ -50,6 +56,6 @@ The difference between apache and nginx server is compression is done from mod_d
 
 ## Run PHP
 http://157.230.155.30:8081/phpinfo  
-http://157.230.155.30:8081/phpinfo  
+http://157.230.155.30:8082/phpinfo  
 
 ## Deliver Clean URLS
