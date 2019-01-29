@@ -10,7 +10,7 @@ Apache
 username: wel288  
 password: 12345  
 
-Nginx:
+Nginx  
 username:guest  
 password:passwordforguest  
 
