@@ -10,7 +10,8 @@ username:guest
 password:passwordforguest  
 
 ## Have a static team page
-https://validator.w3.org/check?uri=http%3A%2F%2F157.230.155.30%3A8081%2F  
+https://validator.w3.org/check?uri=http%3A%2F%2F157.230.155.30%3A8081%2F
+https://validator.w3.org/check?uri=http%3A%2F%2F157.230.155.30%3A8082%2F
 
 ## Use custom error pages
 
