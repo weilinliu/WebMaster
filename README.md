@@ -36,7 +36,11 @@ To deploy our status page and custom error page to our production server, we use
 http://157.230.155.30:8081/awstats.mysite  
 http://157.230.155.30:8082/awstats.mysite  
 
-## Obscure server identity
+## Obscure server identity  
+When you send on get request for apache2 or nginx
+Apache: http://157.230.155.30:8081  
+Nginx: http://157.230.155.30:8082
+if you check the header in the response, the 'server' property is either not shown up or is left to be blank.
 
 ## Compress textual content
 Comparison report of gzip
