@@ -59,6 +59,6 @@ http://157.230.155.30:8081/phpinfo
 http://157.230.155.30:8082/phpinfo  
 
 ## Deliver Clean URLS
-We can use phpinfo to retrieve the phpinfo.php file for both Apache2 and Nginx server
+We can use phpinfo to retrieve the phpinfo.php file for both Apache2 and Nginx server  
 http://157.230.155.30:8081/phpinfo  
 http://157.230.155.30:8082/phpinfo  
