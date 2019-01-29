@@ -22,7 +22,8 @@ one or more small icons, associated with a particular website or web page.
 http://157.230.155.30:8081/robots    
 http://157.230.155.30:8082/robots 
 
-## Deploy from Github 
+## Deploy from Github
+To deploy our status page and custom error page to our production server, we used git hooks. We first created an empty remote repository on the server just for the version control. Then on local git repository, we added a link to the remote repository. We can use the command "git push live master" to deploy changes to the server.(This method is posted on Slack by porcessor https://cse135winter2019.slack.com/archives/CF4C57H89/p1548203781054100?thread_ts=1548203781.054100)
 
 ## Log Properly
 http://157.230.155.30:8081/awstats.mysite  
