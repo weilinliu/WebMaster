@@ -1,7 +1,7 @@
 #header{
     text-align:center;
     padding:150px 0;
-    background:url(assets/ucsd.jpg) no-repeat;
+    background:url(../assets/ucsd.jpg) no-repeat;
     background-size:cover;
 }
 #header .jumbotron{
