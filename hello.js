@@ -38,14 +38,13 @@ app.get('/hellodata', (req, res) => {
         res.write(JSON.stringify(JSONObj))
         res.end()
         return;
-    }
-    if(type == null || type === "") {
+    } else {
         var fileStream = fs.createReadStream('./public/404.html', "UTF-8");
         res.writeHead(404, {"Content-Type": "text/html"});
         fileStream.pipe(res);
+        res.end()
         return
-    } else if(type === "XML")
-    res.send(type)
+    }
 });
 
 app.get('/robots*', (req, res) => {
