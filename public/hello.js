@@ -47,6 +47,12 @@ app.get('/hellodata', (req, res) => {
     }
 });
 
+app.get('/env', (req, res) =>{
+    let headers = req.headers;
+    res.send(headers);
+    return
+});
+
 app.get('/robots*', (req, res) => {
     fs.readFile("./robots.txt", "UTF-8", function(err, robotsFile){
         res.writeHead(200, {"Content-Type": "text/html"});
