@@ -16,9 +16,9 @@
     session_start();
     if(isset($_REQUEST['submit'])){
         $_SESSION['username'] = $_POST['username'];
-        print($_SESSION['username']);
     }
 ?>
 
+<a href="second.php">Next Page</a>
 </body>
 </html>
