@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <h1>Form</h1>
+    <form id="form">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname">
+        <br>
+
+        <label for="lastname">Last name</label>
+        <input type="text" id="lastname" name="lastname">
+        <br>
+
+        <label for="color">Color</label>
+        <select id="color" name="color">
+            <option value="blue">blue</option>
+            <option value="yellow">yellow</option>
+            <option value="white">white</option>
+        </select>
+        <br>
+
+    </form>
+
+    <label for="method">method</label>
+    <select id="method" name="method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+    </select>
+    <br>
+
+    <button type="submit" id="btn-submit" onclick="myFunction()">Submit</button>
+
+    <script>
+        function myFunction() {
+            console.log("hello");
+            let form = document.getElementById("form");
+            form.method = document.getElementById("method").value;
+            form.action = "formsubmit";
+            form.submit()
+        }
+    </script>
+</body>
+</html>

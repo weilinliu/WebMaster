@@ -1,10 +1,14 @@
 const express = require('express');
+const path = require('path');
+
 var app = express();
-app.use(express.static('public'))
-xml = require('xml')
+app.use(express.static('public'));
+app.use(express.urlencoded());
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'public'));
+xml = require('xml');
 
 var fs = require('fs');
-const path = require('path')
 
 app.get('/', (req, res) => {
     fs.readFile("./public/team.html", "UTF-8", function(err, html){
@@ -23,7 +27,7 @@ app.get('/helloworld', (req, res) => {
 });
 
 app.get('/hellodata', (req, res) => {
-    var type = req.param('response')
+    var type = req.param('response');
     let d = new Date();
 
     if(type === "XML") {
@@ -39,11 +43,11 @@ app.get('/hellodata', (req, res) => {
         res.end()
         return;
     } else {
-        var fileStream = fs.createReadStream('./public/404.html', "UTF-8");
-        res.writeHead(404, {"Content-Type": "text/html"});
-        fileStream.pipe(res);
-        res.end()
-        return
+        fs.readFile("./public/error.html", "UTF-8", function(err, html){
+            res.writeHead(200, {"Content-Type": "text/html;charset=UTF-8"});
+            res.write(html);
+            res.end();
+        });
     }
 });
 
@@ -59,6 +63,29 @@ app.get('/robots*', (req, res) => {
         res.write(robotsFile);
         res.end();
     });
+});
+
+app.get('/form', (req, res) => {
+    fs.readFile("./public/form.html", "UTF-8", function(err, robotsFile){
+        res.writeHead(200, {"Content-Type": "text/html"});
+        res.write(robotsFile);
+        res.end();
+    });
+});
+
+app.get('/formsubmit', (req, res) => {
+    console.log(req.body);
+    let firstname = req.body.firstname;
+    let lastname = req.body.lastname;
+    let color = req.body.color;
+    res.render('formsubmit', {lastname :lastname, firstname: firstname, color: color});
+});
+
+app.post('/formsubmit', (req, res) => {
+    let firstname = req.body.firstname;
+    let lastname = req.body.lastname;
+    let color = req.body.color;
+    res.render('formsubmit', {lastname :lastname, firstname: firstname, color: color});
 });
 
 app.all('*', (req, res, next) => {
