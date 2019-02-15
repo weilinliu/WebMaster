@@ -1,7 +1,6 @@
 <html
 <head>
 <title>Session Fun</title>
-<h1>Reading session variables</h1>
 </head>
 <body>
 
@@ -16,10 +15,11 @@
 
 
     if(isset($_GET['logout'])) {
-        session_unset();
+        session_destroy();
+        unset($_SESSION['username']);
     }
 ?>
 <br>
-<button href="?logout">Clear Session</button>
+<input type="submit" value="clear">
 </body>
 </html>

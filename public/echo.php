@@ -17,8 +17,9 @@
                 else {
                         echo '<body style="background-color:white">';
                 }
-                echo "Hello " . $firstname" " . $lastname . " from a Web app written in PHP on " . date("h:i:sa"). " time";
+                echo "Hello " . $firstname . " " . $lastname . " from a Web app written in PHP on " . date("h:i:sa"). " time";
 
         ?>
         </body>
 </html>
+
